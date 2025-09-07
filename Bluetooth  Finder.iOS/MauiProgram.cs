@@ -1,4 +1,6 @@
-﻿namespace Bluetooth__Finder.iOS
+﻿using Plugin.Maui.Audio;
+
+namespace Bluetooth__Finder.iOS
 {
     public static class MauiProgram
     {

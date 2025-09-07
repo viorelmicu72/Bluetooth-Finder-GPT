@@ -1,8 +1,9 @@
 ﻿using Bluetooth__Finder.Models;
 using Bluetooth__Finder.Services;
 using Bluetooth__Finder.ViewModels;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Bluetooth__Finder
+namespace Bluetooth__Finder.Pages
 {
     public partial class MainPage : ContentPage
     {
@@ -25,5 +26,6 @@ namespace Bluetooth__Finder
             => await Navigation.PushAsync(new SettingsPage(
                 new SettingsViewModel((BindingContext as MainViewModel)!)));
     }
+
 
 }

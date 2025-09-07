@@ -1,4 +1,4 @@
-namespace Bluetooth__Finder;
+namespace Bluetooth__Finder.Pages;
 
 public partial class DevicePage : ContentPage
 {
