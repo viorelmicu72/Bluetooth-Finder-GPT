@@ -22,9 +22,15 @@ namespace Bluetooth__Finder.Pages
                     device)));
         }
 
+        //private async void OnSettings(object sender, EventArgs e)
+        //    => await Navigation.PushAsync(new SettingsPage(
+        //        new SettingsViewModel((BindingContext as MainViewModel)!)));
+
         private async void OnSettings(object sender, EventArgs e)
-            => await Navigation.PushAsync(new SettingsPage(
-                new SettingsViewModel((BindingContext as MainViewModel)!)));
+    => await Navigation.PushAsync(new SettingsPage
+    {
+        BindingContext = new SettingsViewModel((BindingContext as MainViewModel)!)
+    });
     }
 
 
