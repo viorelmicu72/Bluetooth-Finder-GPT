@@ -1,5 +1,5 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             x:Class="BluetoothFinder.Pages.SettingsPage"
+             x:Class="Bluetooth__Finder.Pages.SettingsPage"
              Title="Setări">
     <VerticalStackLayout Padding="16" Spacing="12">
         <HorizontalStackLayout>
