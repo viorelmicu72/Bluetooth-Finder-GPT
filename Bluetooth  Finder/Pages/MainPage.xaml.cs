@@ -7,20 +7,14 @@ namespace Bluetooth__Finder.Pages
 {
     public partial class MainPage : ContentPage
     {
-        public MainPage(MainViewModel vm)
+        private readonly IServiceProvider _services;
+
+        public MainPage(MainViewModel vm, IServiceProvider services)
         {
             InitializeComponent();
             BindingContext = vm;
+            _services = services;
         }
-
-        //private async void OnOpenDevice(object sender, EventArgs e)
-        //{
-        //    if (sender is Button btn && btn.BindingContext is DeviceModel device)
-        //        await Navigation.PushAsync(new DevicePage(new DeviceViewModel(
-        //            Services.GetRequiredService<BleService>(),
-        //            Services.GetRequiredService<AlarmService>(),
-        //            device)));
-        //}
 
         private async void OnOpenDevice(object sender, EventArgs e)
         {
@@ -28,21 +22,16 @@ namespace Bluetooth__Finder.Pages
                 await Navigation.PushAsync(new DevicePage
                 {
                     BindingContext = new DeviceViewModel(
-                        Services.GetRequiredService<BleService>(),
-                        Services.GetRequiredService<AlarmService>(),
+                        _services.GetRequiredService<BleService>(),
+                        _services.GetRequiredService<AlarmService>(),
                         device)
                 });
         }
-        //private async void OnSettings(object sender, EventArgs e)
-        //    => await Navigation.PushAsync(new SettingsPage(
-        //        new SettingsViewModel((BindingContext as MainViewModel)!)));
 
         private async void OnSettings(object sender, EventArgs e)
-    => await Navigation.PushAsync(new SettingsPage
-    {
-        BindingContext = new SettingsViewModel((BindingContext as MainViewModel)!)
-    });
+            => await Navigation.PushAsync(new SettingsPage
+            {
+                BindingContext = new SettingsViewModel((BindingContext as MainViewModel)!)
+            });
     }
-
-
 }
