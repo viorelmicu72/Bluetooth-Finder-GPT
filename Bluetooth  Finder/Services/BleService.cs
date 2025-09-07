@@ -17,14 +17,23 @@ namespace Bluetooth__Finder.Services
         public IDevice? GetConnectedById(string id) =>
             _adapter.ConnectedDevices.FirstOrDefault(d => d.Id.ToString() == id);
 
+        //public async Task<IEnumerable<IDevice>> ScanAsync(TimeSpan timeout)
+        //{
+        //    var found = new List<IDevice>();
+        //    _adapter.DeviceDiscovered += (s, e) => { if (!found.Any(d => d.Id == e.Device.Id)) found.Add(e.Device); };
+        //    await _adapter.StartScanningForDevicesAsync(timeout: timeout);
+        //    return found;
+        //}
+
         public async Task<IEnumerable<IDevice>> ScanAsync(TimeSpan timeout)
         {
             var found = new List<IDevice>();
             _adapter.DeviceDiscovered += (s, e) => { if (!found.Any(d => d.Id == e.Device.Id)) found.Add(e.Device); };
-            await _adapter.StartScanningForDevicesAsync(timeout: timeout);
+            await _adapter.StartScanningForDevicesAsync();
+            await Task.Delay(timeout);
+            await _adapter.StopScanningForDevicesAsync();
             return found;
         }
-
         public async Task<bool> ConnectAsync(IDevice device)
         {
             _adapter.DeviceConnected += OnConnected;
