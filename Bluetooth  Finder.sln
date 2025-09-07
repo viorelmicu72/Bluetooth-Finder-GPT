@@ -1,0 +1,40 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bluetooth  Finder", "Bluetooth  Finder\Bluetooth  Finder.csproj", "{5D49BC65-C897-4975-8F28-6ABC0CC5DD17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bluetooth  Finder.Droid", "Bluetooth  Finder.Droid\Bluetooth  Finder.Droid.csproj", "{38A57A38-0B1C-45B9-A205-7705A09D1F06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bluetooth  Finder.iOS", "Bluetooth  Finder.iOS\Bluetooth  Finder.iOS.csproj", "{B6C8C763-6855-4F27-83E1-DCD0C13F41B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D49BC65-C897-4975-8F28-6ABC0CC5DD17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D49BC65-C897-4975-8F28-6ABC0CC5DD17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D49BC65-C897-4975-8F28-6ABC0CC5DD17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D49BC65-C897-4975-8F28-6ABC0CC5DD17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38A57A38-0B1C-45B9-A205-7705A09D1F06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38A57A38-0B1C-45B9-A205-7705A09D1F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38A57A38-0B1C-45B9-A205-7705A09D1F06}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{38A57A38-0B1C-45B9-A205-7705A09D1F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38A57A38-0B1C-45B9-A205-7705A09D1F06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38A57A38-0B1C-45B9-A205-7705A09D1F06}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B6C8C763-6855-4F27-83E1-DCD0C13F41B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6C8C763-6855-4F27-83E1-DCD0C13F41B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6C8C763-6855-4F27-83E1-DCD0C13F41B3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B6C8C763-6855-4F27-83E1-DCD0C13F41B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6C8C763-6855-4F27-83E1-DCD0C13F41B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6C8C763-6855-4F27-83E1-DCD0C13F41B3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46445A49-1C92-48F1-A295-9F8B6FAEC6FE}
+	EndGlobalSection
+EndGlobal
