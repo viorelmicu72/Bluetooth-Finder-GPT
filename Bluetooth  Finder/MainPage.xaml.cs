@@ -1,25 +1,29 @@
-﻿namespace Bluetooth__Finder
+﻿using Bluetooth__Finder.Models;
+using Bluetooth__Finder.Services;
+using Bluetooth__Finder.ViewModels;
+
+namespace Bluetooth__Finder
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
-        public MainPage()
+        public MainPage(MainViewModel vm)
         {
             InitializeComponent();
+            BindingContext = vm;
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void OnOpenDevice(object sender, EventArgs e)
         {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            if (sender is Button btn && btn.BindingContext is DeviceModel device)
+                await Navigation.PushAsync(new DevicePage(new DeviceViewModel(
+                    Services.GetRequiredService<BleService>(),
+                    Services.GetRequiredService<AlarmService>(),
+                    device)));
         }
+
+        private async void OnSettings(object sender, EventArgs e)
+            => await Navigation.PushAsync(new SettingsPage(
+                new SettingsViewModel((BindingContext as MainViewModel)!)));
     }
 
 }

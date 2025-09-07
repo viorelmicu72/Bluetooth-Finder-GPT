@@ -38,5 +38,10 @@
     </array>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/AppIcon.appiconset</string>
+	
+	<key>NSBluetoothAlwaysUsageDescription</key>
+    <string>Avem nevoie de Bluetooth pentru a detecta dispozitivele tale.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Folosim locația pentru a salva ultima poziție la deconectare.</string>
 </dict>
 </plist>
